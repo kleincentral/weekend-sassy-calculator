@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script defer src="script.js"></script>
   <title>Salary Calculator</title>
 </head>
 <body>
@@ -11,10 +12,65 @@
   </header>
   <main>
     <h2>Add Employee</h2>
+
+    <form>
+      <input 
+        data-testid="firstNameInput"
+        id="input1"
+        placeholder="First Name"
+        type="text">
+      <input 
+        data-testid="lastNameInput"
+        id="input2"
+        placeholder="Last Name"
+        type="text">
+      <input         
+        data-testid="idInput"
+        id="input3"
+        placeholder="ID"
+        type="number">
+      <input 
+        data-testid="titleInput"
+        id="input4"
+        placeholder="Title"
+        type="text">
+      <input 
+        data-testid="annualSalaryInput"
+        id="input5"
+        placeholder="Annual Salary"
+        type="number">
+      <button data-testid="submitButton" class="submittion" onclick="submitClick(event)">Submit</button>
+    </form>
+
     <h2>Employees</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Annual Salary</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        
+      </tbody>
+      <tfoot>
+        <tr>
+          <th class="notBorder"></th>
+          <th class="notBorder"></th>
+          <th class="notBorder"></th>
+          <th class="notBorder"></th>
+          <th class="notBorder"></th>
+          <th class="notBorder"></th>
+        </tr>
+      </tfoot>
+    </table>
   </main>
   <footer>
-    <p>Total Monthly</p>
+    <p id="totalCost">Total Monthly Cost: $0</p>
   </footer>
 </body>
 </html>

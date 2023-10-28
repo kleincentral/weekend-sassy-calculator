@@ -1,0 +1,96 @@
+/* GLOBAL TYPOGRAPHY */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 1.25em;
+  }
+  
+    
+  /* FLEXBOX LAYOUT */
+  html, body {
+    min-height: 100vh;
+    margin: auto;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    background-size: 35%;
+  }
+  header {
+    color: white;
+    height: 8em;
+    background-color: #2d508e;
+    text-align: center;
+    background-size: 10%;
+  }
+  main {
+    flex: auto;
+    max-width: 80%;
+    margin: auto;
+  }
+  footer {
+    height: 8em;
+    background-color: #2d508e;
+    text-align: center;
+  }
+  
+  
+  /* HEADER/FOOTER */
+  header, footer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  h1 {
+    font-size: 2.5em;
+    border-radius: 10px;
+  }
+  
+  
+  /* FORM ELEMENTS */
+  input {
+    padding: .5em;
+    width: 150px;
+    background: #FCFCFC;
+    border: 1px solid;
+  }
+  button {
+    padding: .5em;
+    width: 75px;
+  }
+  
+  
+  /* TABLE */
+  table {
+    width: 100%;
+    text-align: left;
+  }
+  table, th, td {
+    border: 1px solid black;
+    color: black;
+    border-collapse: collapse;
+    height: 2.15em;
+  }
+  th, td {
+    padding: .5em;
+    min-width: 3.5em;
+  }
+  .notBorder {
+    border: none
+  }
+  thead, tfoot {
+    background: #7a7a7a;
+    color: #fcfcfc;
+  }
+  tbody tr:nth-child(odd){ 
+    background: #fcfcfc;
+  }
+  tbody tr:nth-child(even){
+    background: #dcdcdc;
+  }
+
+  .over-budget {
+    color: red
+  }
