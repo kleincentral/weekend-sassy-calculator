@@ -36,7 +36,7 @@ function deleteEntry(event) {
 
     // Math to subtract the total monthy total by the amount deleted (childNodes picks out the 4th index which is input5)
         // then passes it to my calculate salary function
-    monthlyTotal -= Number(event.target.parentElement.parentElement.childNodes[4].textContent)
+    monthlyTotal -= Number(event.target.closest('tr').childNodes[4].textContent)
     calculateSalary(monthlyTotal)
 
     // Removes deleted parent (which is the entire row)
@@ -51,7 +51,6 @@ function calculateSalary(input) {
     // This then takes away any decimal points after 2.
     input = Number.parseFloat(input).toFixed(2)
 
-
     // This if statement asks if the input should be used for two decimal points, or if it should reset
         // to a 0 (0.00 looks odd, so this eliminates that possibility)
     if (input != 0) {
@@ -63,7 +62,7 @@ function calculateSalary(input) {
 
     // Handles the code where you add the red text 'over-budget' to the footer if you are overdraft.
         // The else statement removes it for when you go back into your budget.
-    if (input >= 20000) {
+    if (input > 20000) {
         document.querySelector(`footer`).classList.add('over-budget')
     }
     else{
